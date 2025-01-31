@@ -1,33 +1,46 @@
 #include <stdio.h>
 
-// Aqui vou definir constantes para as direções:
-
-#define CIMA "cima\n";
+// Aqui o as constantes para as direções
+#define CIMA "Cima\n"
 #define BAIXO "Baixo\n"
 #define ESQUERDA "Esquerda\n"
 #define DIREITA "Direita\n"
 #define DIAGONAL_SUPERIOR_DIREITA "Diagonal Superior Direita\n"
 
-// Aqui defini as constantes conforme solicitado: 
+// Aqui definindo constantes para o número de casas que cada peça pode se mover
 #define CASAS_BISPO 5
 #define CASAS_TORRE 5
 #define CASAS_RAINHA 8
 
-// A função para mover o bispo:
+// Função para movera o Bispo
 void moverBispo() {
-    printf("Movimentacao do Bispo");
-    for (int 1 = 0; i < CASAS_BISPO; i++) {
+    printf("Movimentação do Bispo:\n");
+    for (int i = 0; i < CASAS_BISPO; i++) {
         printf(DIAGONAL_SUPERIOR_DIREITA);
     }
 }
 
-// Aqui a função para mover a torre:
+// Função para movera a Torre
 void moverTorre() {
-    printf ("Movimentacao da Torre");
+    printf("Movimentação da Torre:\n");
     for (int i = 0; i < CASAS_TORRE; i++) {
-        printf("DIREITA");
-
+        printf(DIREITA);
     }
 }
 
+// Função para movera a Rainha
+void moverRainha() {
+    printf("Movimentação da Rainha:\n");
+    for (int i = 0; i < CASAS_RAINHA; i++) {
+        printf(ESQUERDA);
+    }
+}
 
+int main() {
+    // A função para mover as peças
+    moverBispo();
+    moverTorre();
+    moverRainha();
+
+    return 0;
+}
